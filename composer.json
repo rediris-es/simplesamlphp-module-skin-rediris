@@ -1,0 +1,11 @@
+{
+  "name": "rediris-es/simplesamlphp-module-rediris-skin",
+  "description": "RedIRIS simpleSAMLphp theme",
+  "minimum-stability": "stable",
+  "type": "simplesamlphp-module",
+  "license": "CC0-1.0",
+  "keywords": [ "simplesamlphp", "RedIRIS", "skin", "SIR2", "IdP" , "eduGAIN" ],
+  "require": {
+    "components/jquery": "3.6.0"
+  }
+}
