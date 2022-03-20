@@ -21,8 +21,8 @@ The repository contains different logos that are trademarks, and images under cr
 
 3. Copy your institution logo under these paths:
 
-   -  `simplesamlphp-module-skin-rediris/www/assets/images/logo.svg` is the organisation logo in full color
-   -  `simplesamlphp-module-skin-rediris/www/assets/images/logo-white.svg` is the organisation logo in white, to be used on top of a darker color.
+   -  `simplesamlphp-module-skin-rediris/www/assets/images/logo.svg` is the organization logo in full color
+   -  `simplesamlphp-module-skin-rediris/www/assets/images/logo-white.svg` is the organization logo in white, to be used on top of a darker color.
 
 4. Edit the following files, to fit your organization color:
 
@@ -32,6 +32,6 @@ The repository contains different logos that are trademarks, and images under cr
 
    - `simplesaml-module-skin-rediris/themes/RedIRIS/core/loginuserpass.twig`
 
-This probably includes change the slider photos, near the end of this file.
+This probably includes changing the vegas slider images, near the end of the file.
 
-You can also add a link to the tool to recover credentials, if you have one.
+You can also add a link to the tool to recover credentials, if you have one, just uncomment and modify the relevant lines.
