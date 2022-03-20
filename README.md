@@ -1,6 +1,6 @@
 # SimpleSAMLphp module RedIRIS skin
 
-This is a twig-only SimpleSAMLphp theme used for the RedIRIS identity provider.
+This is a twig-only SimpleSAMLphp theme used for the [RedIRIS identity provider](https://sso.rediris.es).
 
 The theme does not support a language menu yet (although supports translated strings).
 
