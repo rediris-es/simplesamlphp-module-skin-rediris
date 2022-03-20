@@ -1,8 +1,7 @@
 {% set pagetitle = 'Enter your username and password'|trans %}
 
 <!DOCTYPE html>
-
-<html lang="es">
+<html lang="en">
     <head>
         <title>{{ pagetitle }}</title>
         <meta charset="UTF-8">
@@ -37,8 +36,6 @@
 
     </head>
     <body style="background-color: #666666;">
-
-        <!-- TODO:  mostrar errores -->
         <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100 middle">
@@ -115,36 +112,6 @@
                                         <span class="focus-input100"></span>
                                         <span class="label-input100"></span>
                                     </div>
-{#
-
-<!--
-                                    <div class="flex-sb-m flex-row-reverse w-full p-t-3 p-b-32">
--->
-                                        <!--
-                                        {% if rememberMeEnabled -%}
-                                        
-                                        <div class="contact100-form-checkbox">
-                                                <input id="remember_me" type="checkbox" tabindex="5" class="input-checkbox100"
-                                            {{ rememberMeChecked ? 'checked="checked"' }} name="remember_me" value="Yes">
-                                    <label class="label-checkbox100" for="remember_me">
-                                            {{ 'Remember me'|trans }}
-                                    </label>
-                            </label>
-                    </div>
-                    
-                                        {%- endif %}
-                                        -->
-                                        <!--
-                                        <div>
-                                            <a href="/mi-cuenta/mi-cuenta.html" class="txt1">
-                                                {{ 'Mi cuenta RedIRIS'|trans }}
-                                            </a>
-                                        </div>
-                                        -->
-<!--
-                                    </div>
--->
-#}
                                     {% if organizations is defined -%}
                                         <div class="pure-control-group">
                                             <label class="txt1" for="organization">{{ 'Organization'|trans }}:</label>
@@ -205,60 +172,60 @@
                             </div>
                             {#
                             <div class="fab-container">
-                                <small><a href="/mi-cuenta/mi-cuenta.html">Gestionar mi cuenta RedIRIS</a></small>
-                                <!--<div class="button iconbutton"><a href="/mi-cuenta/mi-cuenta.html"><i class="bi bi-person-badge-fill fa-2x"></i></a></div>-->
+                                <small><a href="/forgot-password-link">I have forgotten my password</a></small>
                             </div>
                             #}
                         </div>
+                    </div>
 
-                        <div class="login100-more" id="slider">
-                        </div>
+                    <div class="login100-more" id="slider">
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!--===============================================================================================-->
-            <script src="{{ asset('vendor/jquery/jquery-3.6.0.js', 'theme-rediris') }}"></script>
-            <!--===============================================================================================-->
-            <script src="{{ asset('vendor/animsition/js/animsition.min.js', 'theme-rediris') }}"></script>
-            <!--===============================================================================================-->
-            <script src="{{ asset('vendor/bootstrap/js/popper.js', 'theme-rediris') }}"></script>
-            <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-            <!--===============================================================================================-->
-            <script src="{{ asset('vendor/select2/select2.min.js', 'theme-rediris') }}"></script>
-            <!--===============================================================================================-->
-            <script src="{{ asset('vendor/daterangepicker/moment.min.js', 'theme-rediris') }}"></script>
-            <script src="{{ asset('vendor/daterangepicker/daterangepicker.js', 'theme-rediris') }}"></script>
-            <!--===============================================================================================-->
-            <script src="{{ asset('vendor/countdowntime/countdowntime.js', 'theme-rediris') }}"></script>
-            <!--===============================================================================================-->
-            <script src="{{ asset('vendor/vegas/vegas.min.js', 'theme-rediris') }}"></script>
-            <!--===============================================================================================-->
-            <script src="{{ asset('js/main.js', 'theme-rediris') }}"></script>
-            <script src="{{ asset('js/loginuserpass.js', 'core') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('vendor/jquery/jquery-3.6.0.js', 'theme-rediris') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('vendor/animsition/js/animsition.min.js', 'theme-rediris') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('vendor/bootstrap/js/popper.js', 'theme-rediris') }}"></script>
+        <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('vendor/select2/select2.min.js', 'theme-rediris') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('vendor/daterangepicker/moment.min.js', 'theme-rediris') }}"></script>
+        <script src="{{ asset('vendor/daterangepicker/daterangepicker.js', 'theme-rediris') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('vendor/countdowntime/countdowntime.js', 'theme-rediris') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('vendor/vegas/vegas.min.js', 'theme-rediris') }}"></script>
+        <!--===============================================================================================-->
+        <script src="{{ asset('js/main.js', 'theme-rediris') }}"></script>
+        <script src="{{ asset('js/loginuserpass.js', 'core') }}"></script>
 
-            <script>
-                $("#slider").vegas({
-                    slides: [
-                        {src: "{{ asset('images/puente-alcantara.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-cangas-onis.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-nuevo-ronda.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-rande-pontevedra.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-romano-cordoba.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-romano-salamanca.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-san-pablo-cuenca.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-triana-sevilla.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-viejo-besalu.jpg', 'theme-rediris') }}"},
-                        {src: "{{ asset('images/puente-vizcaya.jpg', 'theme-rediris') }}"}
-                    ],
-                    timer: false,
-                    shuffle: true,
-                    transition: 'blur',
-                    delay: 10000,
-                    transitionDuration: 2000,
-                    cover: true
-                            //overlay: '{{ asset('vendor/vegas/overlays/05.png', 'theme-rediris') }}'
-                });
-            </script>
-        </body>
-    </html>
+        <script>
+            $("#slider").vegas({
+                slides: [
+                    {src: "{{ asset('images/puente-alcantara.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-cangas-onis.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-nuevo-ronda.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-rande-pontevedra.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-romano-cordoba.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-romano-salamanca.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-san-pablo-cuenca.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-triana-sevilla.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-viejo-besalu.jpg', 'theme-rediris') }}"},
+                    {src: "{{ asset('images/puente-vizcaya.jpg', 'theme-rediris') }}"}
+                ],
+                timer: false,
+                shuffle: true,
+                transition: 'blur',
+                delay: 10000,
+                transitionDuration: 2000,
+                cover: true
+                        //overlay: '{{ asset('vendor/vegas/overlays/05.png', 'theme-rediris') }}'
+            });
+        </script>
+    </body>
+</html>
